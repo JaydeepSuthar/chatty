@@ -14,6 +14,8 @@ $txtClr: #fff;
 body {
 	height: 100vh;
 	width: 100vw;
+
+	background: linear-gradient(#FF4331, #D31A50);
 }
 
 .main-container {
@@ -25,6 +27,9 @@ body {
 	display: flex;
 	flex-direction: column;
 	// justify-content: space-between;
+
+	// for centering chat app
+	margin: 0 auto;
 
 	.header {
 		text-align: center;
