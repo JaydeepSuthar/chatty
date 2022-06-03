@@ -1,6 +1,7 @@
 // I am taking mobile first approach
 
-$bgClr: #242B2E;
+$bgClr: #242b2e;
+$scrollBgClr: #758283;
 $txtClr: #fff;
 
 * {
@@ -28,7 +29,7 @@ body {
 		text-align: center;
 		color: $txtClr;
 
-		background-color: #03C6C7;
+		background-color: #03c6c7;
 		width: 100%;
 		height: 3em;
 	}
@@ -39,16 +40,26 @@ body {
 		flex-direction: column;
 
 		.chat-list {
-			li {
-				list-style-type: none;
+			padding: 10px;
+			height: 80vh;
+			flex-grow: 1;
+			margin: 5px 0;
+			overflow-y: scroll;
+			display: flex;
+			flex-direction: column;
+			color: $txtClr;
+
+			&::-webkit-scrollbar {
+				width: 0.25rem;
 			}
 
-			flex-grow: 1;
-			margin: 1em 0em;
-			padding: 5px 5px;
+			&::-webkit-scrollbar-track {
+				background: $bgClr;
+			}
 
-			// background-color: firebrick;
-			color: $txtClr;
+			&::-webkit-scrollbar-thumb {
+				background: $scrollBgClr;
+			}
 		}
 
 		.chat-box {
@@ -56,14 +67,14 @@ body {
 
 			margin-top: 1em;
 			display: flex;
-			
+
 			input {
 				padding: 5px;
 				height: 100%;
 				font-size: 1.5rem;
 				flex-grow: 1;
 			}
-			
+
 			button {
 				cursor: pointer;
 
@@ -71,7 +82,7 @@ body {
 				padding: 7px 8px;
 				font-size: 1.5rem;
 
-				background: #1B98F5;
+				background: #1b98f5;
 				color: $txtClr;
 
 				border: 1px solid transparent;
