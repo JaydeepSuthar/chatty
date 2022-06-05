@@ -1,14 +1,14 @@
 <script setup>
 import ChatMsg from "./ChatMsg.vue";
 
-let count = 50;
+defineProps(['msgList'])
+
 </script>
 
 <template>
 	<ul class="list-chat">
-		<li v-for="(i, idx) in count" :key="idx">
-			<ChatMsg v-if="idx % 2 == 0" :msg="`${i}`" :is-my-msg="true" />
-			<ChatMsg v-else :msg="`${i}`" :is-my-msg="false" />
+		<li v-for="(msg, idx) in msgList" :key="idx">
+			<ChatMsg :msg="msg" :is-my-msg="true" />
 		</li>
 	</ul>
 </template>

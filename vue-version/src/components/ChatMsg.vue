@@ -5,7 +5,7 @@ const props = defineProps({
 	isMyMsg: Boolean,
 });
 
-let msg = false;
+// let msg = false;
 
 </script>
 
@@ -13,14 +13,12 @@ let msg = false;
 
 
 	<section class="tw-flex tw-mt-5" :class="!isMyMsg && 'tw-flex-row-reverse'" id="chat-msg">
-		<img class="tw-self-start tw-mt-4" :src="`https://avatars.dicebear.com/api/bottts/demo.svg`" height="50" width="50" alt="">
+		<img class="tw-self-start" :src="`https://avatars.dicebear.com/api/bottts/demo.svg`" height="50"
+			width="50" alt="">
 
 		<div class="tw-mx-3 tw-max-w-full tw-text-gray-700 tw-bg-slate-50 tw-flex tw-rounded-3xl tw-px-5 tw-py-3"
 			id="msg">
 			{{ msg }}
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. A, assumenda. Quidem temporibus itaque beatae
-			perferendis officiis nobis assumenda error veniam. Praesentium, est odit voluptatum qui distinctio inventore
-			vel dolor quis.
 		</div>
 	</section>
 </template>
